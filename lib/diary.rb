@@ -1,6 +1,9 @@
 # Understands the storage of appointments
 class Diary
   attr_reader :appointments
+  # def appointments
+  #   @appointment
+  # end
 
   def initialize
     @appointments = []
@@ -14,6 +17,6 @@ class Diary
   private
 
   def not_free?(appointment)
-    appointments.map(&:time).includes? appointment.time
+    appointments.map(&:time).include? appointment.time
   end
 end
